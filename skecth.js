@@ -358,7 +358,6 @@ function enemy(){
     for (enemyNumber = 0; enemyNumber < index; enemyNumber++){
         enemiesX.push(circlePosX);
         enemiesY.push(circlePosY);
-        console.log(enemiesX.length)
 
         if (frameCount % 120 == enemyNumber*6){
             enemiesRandomX[enemyNumber] = random(randomPossibilites);
@@ -396,11 +395,13 @@ function enemy(){
         circle (enemiesX[enemyNumber], enemiesY[enemyNumber], enemyDiameter);
         pop;
       
+        ;
+      
+      
         enemiesDist = dist (jouerX, jouerY, enemiesX[enemyNumber], enemiesY[enemyNumber]);
-      }
     if (enemy1 <= 15 +enemyDiameter / 2 || enemy2 <= 15 + enemyDiameter/2 || enemy0 <= 15 + enemyDiameter || enemiesDist <= 15 + enemyDiameter/2){
         gameOver = 0;
         numberOfLifes --;
-    }
+    }}
        
 }
