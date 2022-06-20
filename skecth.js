@@ -54,7 +54,7 @@ function draw() {
         block_out_of_screen();
         enemy();  
         scoreBoard();    
-        measuringInstrument();                       //for positioning
+        // measuringInstrument();                       //for positioning
         score();
     } else {
         gameOverMan();
