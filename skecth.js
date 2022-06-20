@@ -54,7 +54,7 @@ function draw() {
         block_out_of_screen();
         enemy();  
         scoreBoard();    
-        // measuringInstrument();                       //for positioning
+        measuringInstrument();                       //for positioning
         score();
     } else {
         gameOverMan();
@@ -355,12 +355,12 @@ function enemy(){
         enemiesRandomX.push(1);
         enemiesRandomY.push(1);
         
-    for (enemyNumber = 0; enemyNumber < index; enemyNumber++){
+    for (enemyNumber = 0; enemyNumber < index; enemyNumber++){    // zrobic "i" zamiast enemyNumber
         enemiesX.push(circlePosX);
         enemiesY.push(circlePosY);
 
         if (frameCount % 120 == enemyNumber*6){
-            enemiesRandomX[enemyNumber] = random(randomPossibilites);
+            enemiesRandomX[enemyNumber] = random(randomPossibilites);   // dodac [i] do enemyNumber 
         }
         
         if (frameCount % 180 == enemyNumber*6){
@@ -374,16 +374,18 @@ function enemy(){
             enemiesX[enemyNumber] = 10;
             enemiesDirectX[enemyNumber] *=-1;
         }
-        if (enemiesX[enemyNumber] >630){
+
+        if (enemiesX[enemyNumber] > 630){
             enemiesX[enemyNumber] = 630;
             enemiesDirectX[enemyNumber] *=-1;
         }
     
-        if (enemiesY[enemyNumber] <10){
+        if (enemiesY[enemyNumber] < 10){
             enemiesY[enemyNumber] = 10;
             enemiesDirectY[enemyNumber] *=-1;
         }
-        if (enemiesY[enemyNumber] >630){
+
+        if (enemiesY[enemyNumber] > 630){
             enemiesY[enemyNumber] = 630;
             enemiesDirectY[enemyNumber] *=-1;
         }
